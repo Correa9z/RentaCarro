@@ -1,0 +1,240 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\clases\\clsempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:clases\\clsempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\clases\\clsclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:clases\\clsclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|c:\\users\\david\\onedrive\\escritorio\\proyecto\\renta\\models\\renta.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:models\\renta.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\controllers\\tiposdevehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:controllers\\tiposdevehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\clases\\clsvehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:clases\\clsvehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\clases\\clstiposdevehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:clases\\clstiposdevehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\models\\empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:models\\empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\models\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:models\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF9C9D80-7958-4910-9BD7-9C40E87CA55D}|RENTA.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1157,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "App_Start\\WebApiConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T00:21:36.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TiposDeVehiculosController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Controllers\\TiposDeVehiculosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TiposDeVehiculosController.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Controllers\\TiposDeVehiculosController.cs",
+              "RelativeToolTip": "Controllers\\TiposDeVehiculosController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAADEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T03:43:30.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VehiculosController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Controllers\\VehiculosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehiculosController.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Controllers\\VehiculosController.cs*",
+              "RelativeToolTip": "Controllers\\VehiculosController.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T01:14:21.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RENTA.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Models\\RENTA.edmx",
+              "RelativeDocumentMoniker": "Models\\RENTA.edmx",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Models\\RENTA.edmx [Diagram1]",
+              "RelativeToolTip": "Models\\RENTA.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-05-25T22:23:52.758Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsClientes.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Clases\\clsClientes.cs",
+              "RelativeDocumentMoniker": "Clases\\clsClientes.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Clases\\clsClientes.cs",
+              "RelativeToolTip": "Clases\\clsClientes.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAC8AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T20:57:36.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsEmpleados.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Clases\\clsEmpleados.cs",
+              "RelativeDocumentMoniker": "Clases\\clsEmpleados.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Clases\\clsEmpleados.cs",
+              "RelativeToolTip": "Clases\\clsEmpleados.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAJsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T22:35:25.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadosController.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAAAIEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T19:22:36.664Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "clsVehiculos.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Clases\\clsVehiculos.cs",
+              "RelativeDocumentMoniker": "Clases\\clsVehiculos.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Clases\\clsVehiculos.cs",
+              "RelativeToolTip": "Clases\\clsVehiculos.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAAEYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T14:32:49.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "clsTiposDeVehiculos.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Clases\\clsTiposDeVehiculos.cs",
+              "RelativeDocumentMoniker": "Clases\\clsTiposDeVehiculos.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Clases\\clsTiposDeVehiculos.cs",
+              "RelativeToolTip": "Clases\\clsTiposDeVehiculos.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADQAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T19:02:09.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Empleados.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Models\\Empleados.cs",
+              "RelativeDocumentMoniker": "Models\\Empleados.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Models\\Empleados.cs",
+              "RelativeToolTip": "Models\\Empleados.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T22:25:48.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Clientes.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Models\\Clientes.cs",
+              "RelativeDocumentMoniker": "Models\\Clientes.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Models\\Clientes.cs",
+              "RelativeToolTip": "Models\\Clientes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwB4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T22:25:32.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\RENTA\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "Controllers\\ClientesController.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAACYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T21:10:54.143Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 35,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

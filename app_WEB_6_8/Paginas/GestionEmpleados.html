@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empleados - Renta de Vehículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: #0275d8;
+                }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="number"], input[type="text"], input[type="email"], select {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: calc(100% - 22px);
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0275d8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0256a0;
+            }
+
+        #detallesEmpleado {
+            text-align: left;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Empleados</h1>
+        <nav>
+            <ul>
+                <li><a href="Menu.html">Inicio</a></li>
+                <li><a href="GestionCatalogo.html">Gestión de Catálogo</a></li>
+                <li><a href="GestionEmpleados.html">Gestión de Empleados</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Agregar Empleado</h2>
+        <form id="formAgregarEmpleado">
+            <label for="EmpleadoID">Empleado ID:</label>
+            <input type="number" id="EmpleadoID" name="EmpleadoID" required>
+
+            <label for="SucursalID">Sucursal ID:</label>
+            <select id="SucursalID" name="SucursalID">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" required>
+
+            <label for="Apellido">Apellido:</label>
+            <input type="text" id="Apellido" name="Apellido" required>
+
+            <label for="Telefono">Teléfono:</label>
+            <input type="text" id="Telefono" name="Telefono" required>
+
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email" required>
+
+            <label for="Posicion">Posición:</label>
+            <select id="Posicion" name="Posicion">
+                <option value="Gerente">Gerente</option>
+                <option value="Vendedor">Vendedor</option>
+                <option value="Cajero">Cajero</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+            <button type="submit">Agregar</button>
+        </form>
+        <section>
+            <h2>Listado de Todos los Empleados</h2>
+            <button id="consultarTodosBtn">Consultar Todos</button>
+            <div id="listadoEmpleados"></div>
+        </section>
+    </section>
+    <section>
+        <h2>Consultar Empleado por ID</h2>
+        <form id="formConsultaEmpleadoID">
+            <label for="consultaEmpleadoID">Empleado ID:</label>
+            <input type="number" id="consultaEmpleadoID" name="consultaEmpleadoID" required>
+            <button type="button" id="btnConsultarEmpleadoPorID">Consultar por ID</button>
+        </form>
+    </section>
+    <section id="detallesEmpleado" style="display:none;">
+        <h2>Detalles del Empleado</h2>
+        <form id="formDetallesEmpleado">
+            <label for="detEmpleadoID">Empleado ID:</label>
+            <input type="number" id="detEmpleadoID" name="detEmpleadoID" disabled>
+            <label for="detSucursalID">Sucursal ID:</label>
+            <select id="detSucursalID" name="SucursalID">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <label for="detNombre">Nombre:</label>
+            <input type="text" id="detNombre" name="Nombre" required>
+
+            <label for="detApellido">Apellido:</label>
+            <input type="text" id="detApellido" name="Apellido" required>
+
+            <label for="detTelefono">Teléfono:</label>
+            <input type="text" id="detTelefono" name="Telefono" required>
+
+            <label for="detEmail">Email:</label>
+            <input type="email" id="detEmail" name="Email" required>
+
+            <label for="detPosicion">Posición:</label>
+            <select id="detPosicion" name="Posicion">
+                <option value="Gerente">Gerente</option>
+                <option value="Vendedor">Vendedor</option>
+                <option value="Cajero">Cajero</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+
+            <button type="button" id="btnActualizarEmpleado">Actualizar Empleado</button>
+            <button type="button" id="btnEliminarEmpleado">Eliminar Empleado</button>
+        </form>
+    </section>
+    <script src="Scripts/Empleados.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renta de Vehículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://example.com/vehicle-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white; /* Cambiar el color del texto para mejor visibilidad */
+        }
+
+        nav {
+            background-color: rgba(0, 77, 153, 0.8); /* Transparencia añadida */
+            padding: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            position: relative;
+        }
+
+        a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #0073e6;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .submenu a {
+                display: block;
+            }
+
+        li:hover .submenu {
+            display: block;
+        }
+
+        .submenu a:hover {
+            background-color: #0056b3;
+        }
+
+        .dropdown-arrow::after {
+            content: "▼"; /* Agrega la flecha hacia abajo */
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="dropdown-arrow">
+                <a href="#">Funciones de Administrador</a>
+                <ul class="submenu">
+                    <li><a href="GestionCatalogo.html">Gestión de Catálogo</a></li>
+                    <li><a href="GestionEmpleados.html">Gestión de Empleados</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

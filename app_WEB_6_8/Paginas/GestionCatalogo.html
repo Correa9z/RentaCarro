@@ -1,0 +1,704 @@
+﻿<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Catálogo - Renta de Vehículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: #0275d8;
+                }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="number"], input[type="text"], select {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: calc(100% - 22px);
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0275d8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0256a0;
+            }
+
+        #detallesVehiculo, #listadoTiposVehiculos {
+            text-align: left;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaeaea;
+        }
+
+        h4 {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .tipo-vehiculo-container {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Catálogo de Vehículos</h1>
+        <nav>
+            <ul>
+                <li><a href="Menu.html">Inicio</a></li>
+                <li><a href="GestionCatalogo.html">Gestión de Catálogo</a></li>
+                <li><a href="GestionEmpleados.html">Gestión de Empleados</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Agregar Tipo de Vehículo</h2>
+        <form id="formAgregarTipoVehiculo">
+            <label for="TipoVehiculoID">Tipo Vehículo ID:</label>
+            <input type="number" id="TipoVehiculoID" name="TipoVehiculoID" required>
+            <label for="descripcion">Descripción:</label>
+            <select id="descripcion" name="descripcion">
+                <option value="sedan">Sedan</option>
+                <option value="furgoneta">Furgoneta</option>
+                <option value="camion">Camión</option>
+                <option value="camioneta">Camioneta</option>
+                <option value="coupe">Coupé</option>
+            </select>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+    <section>
+        <h2>Consultar Tipo de Vehículo por ID</h2>
+        <form id="formConsultaTipoVehiculoID">
+            <label for="consultaTipoVehiculoID">Tipo Vehículo ID:</label>
+            <input type="number" id="consultaTipoVehiculoID" name="consultaTipoVehiculoID" required>
+            <button type="button" id="btnConsultarPorID" onclick="consultarTipoVehiculoPorID()">Consultar por ID</button>
+        </form>
+    </section>-->
+<!-- Detalles del tipo de vehículo, inicialmente oculto -->
+<!--<section id="detallesTipoVehiculo" style="display:none;">
+    <h2>Detalles del Tipo de Vehículo</h2>
+    <form id="formDetallesTipoVehiculo">
+        <label for="tipoVehiculoID">Tipo Vehículo ID:</label>
+        <input type="text" id="tipoVehiculoID" name="tipoVehiculoID" disabled>
+
+        <label for="editDescripcion">Descripción:</label>
+        <input type="text" id="editDescripcion" name="editDescripcion">
+
+        <button type="button" id="btnActualizarDescripcion">Actualizar Descripción</button>
+        <button type="button" id="btnEliminarTipo">Eliminar</button>
+    </form>
+</section>-->
+<!-- Sección de vehículos asociados, inicialmente oculta -->
+<!--<section id="vehiculosAsociados" style="display:none;">
+    <h2>Vehículos Asociados</h2>
+    <form id="formVehiculosAsociados">-->
+<!-- Inputs para los detalles del vehículo, con IDs únicos -->
+<!--<label for="editVehiculoID">Vehiculo ID:</label>
+            <input type="number" id="editVehiculoID" name="editVehiculoID">
+            <label for="editTipoVehiculoID">Tipo Vehiculo ID:</label>
+            <input type="number" id="editTipoVehiculoID" name="editTipoVehiculoID">
+            <label for="editSucursalID">Sucursal ID:</label>
+            <select id="editSucursalID" name="editSucursalID">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <label for="editMarca">Marca:</label>
+            <input type="text" id="editMarca" name="editMarca">
+
+            <label for="editModelo">Modelo:</label>
+            <input type="text" id="editModelo" name="editModelo">
+
+            <label for="editAno">Año:</label>
+            <input type="number" id="editAno" name="editAno">
+
+            <label for="editNumeroPlaca">Número de Placa:</label>
+            <input type="text" id="editNumeroPlaca" name="editNumeroPlaca">
+
+            <label for="editEstado">Estado:</label>
+            <input type="text" id="editEstado" name="editEstado">
+
+            <label for="editSeguroID">Seguro ID:</label>
+            <select id="editSeguroID" name="editSeguroID">
+                <option value="1">Cobertura Total</option>
+                <option value="2">Cobertura Parcial</option>
+                <option value="3">Cobertura Por Robo</option>
+            </select>
+
+            <label for="editTarifaQuincenal">Tarifa Quincenal:</label>
+            <input type="number" id="editTarifaQuincenal" name="editTarifaQuincenal">
+
+            <button type="button" id="btnInsertarVehiculo">Insertar Vehículo</button>
+            <button type="button" id="btnActualizarVehiculo">Actualizar Vehículo</button>
+            <button type="button" id="btnEliminarVehiculo">Eliminar Vehículo</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Listado de Todos los Tipos de Vehículos</h2>
+        <button id="consultarTodosBtn">Consultar Todos</button>
+        <div id="listadoTiposVehiculos"></div>
+    </section>
+    <script src="Scripts/TiposDeVehiculos.js"></script>
+    <script src="Scripts/Vehiculos.js"></script>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Catálogo - Renta de Vehículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: #0275d8;
+                }
+
+        .form-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="number"], input[type="text"], select {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: calc(100% - 22px);
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0275d8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0256a0;
+            }
+
+        #listadoTiposVehiculos {
+            text-align: center;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Catálogo de Vehículos</h1>
+        <nav>
+            <ul>
+                <li><a href="Menu.html">Inicio</a></li>
+                <li><a href="GestionCatalogo.html">Gestión de Catálogo</a></li>
+                <li><a href="GestionEmpleados.html">Gestión de Empleados</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form-container">
+        <section class="form-card">
+            <h2>Agregar Tipo de Vehículo</h2>
+            <form id="formAgregarTipoVehiculo">
+                <label for="TipoVehiculoID">Tipo Vehículo ID:</label>
+                <input type="number" id="TipoVehiculoID" name="TipoVehiculoID" required>
+                <label for="descripcion">Descripción:</label>
+                <select id="descripcion" name="descripcion">
+                    <option value="sedan">Sedan</option>
+                    <option value="furgoneta">Furgoneta</option>
+                    <option value="camion">Camión</option>
+                    <option value="camioneta">Camioneta</option>
+                    <option value="coupe">Coupé</option>
+                </select>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+        <section class="form-card">
+            <h2>Consultar Tipo de Vehículo por ID</h2>
+            <form id="formConsultaTipoVehiculoID">
+                <label for="consultaTipoVehiculoID">Tipo Vehículo ID:</label>
+                <input type="number" id="consultaTipoVehiculoID" name="consultaTipoVehiculoID" required>
+                <button type="button" id="btnConsultarPorID" onclick="consultarTipoVehiculoPorID()">Consultar por ID</button>
+            </form>
+        </section>
+        <section class="form-card" id="detallesTipoVehiculo" style="display:none;">
+            <h2>Detalles del Tipo de Vehículo</h2>
+            <form id="formDetallesTipoVehiculo">
+                <label for="tipoVehiculoID">Tipo Vehículo ID:</label>
+                <input type="text" id="tipoVehiculoID" name="tipoVehiculoID" disabled>
+                <label for="editDescripcion">Descripción:</label>
+                <input type="text" id="editDescripcion" name="editDescripcion">
+                <button type="button" id="btnActualizarDescripcion">Actualizar Descripción</button>
+                <button type="button" id="btnEliminarTipo">Eliminar</button>
+            </form>
+        </section>
+        <section class="form-card" id="vehiculosAsociados" style="display:none;">
+            <h2>Vehículos Asociados</h2>
+            <form id="formVehiculosAsociados">
+                <label for="editVehiculoID">Vehiculo ID:</label>
+                <input type="number" id="editVehiculoID" name="editVehiculoID">
+                <label for="editTipoVehiculoID">Tipo Vehiculo ID:</label>
+                <input type="number" id="editTipoVehiculoID" name="editTipoVehiculoID">
+                <label for="editSucursalID">Sucursal ID:</label>
+                <select id="editSucursalID" name="editSucursalID">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <label for="editMarca">Marca:</label>
+                <input type="text" id="editMarca" name="editMarca">
+                <label for="editModelo">Modelo:</label>
+                <input type="text" id="editModelo" name="editModelo">
+                <label for="editAno">Año:</label>
+                <input type="number" id="editAno" name="editAno">
+                <label for="editNumeroPlaca">Número de Placa:</label>
+                <input type="text" id="editNumeroPlaca" name="editNumeroPlaca">
+                <label for="editEstado">Estado:</label>
+                <input type="text" id="editEstado" name="editEstado">
+                <label for="editSeguroID">Seguro ID:</label>
+                <select id="editSeguroID" name="editSeguroID">
+                    <option value="1">Cobertura Total</option>
+                    <option value="2">Cobertura Parcial</option>
+                    <option value="3">Cobertura Por Robo</option>
+                </select>
+                <label for="editTarifaQuincenal">Tarifa Quincenal:</label>
+                <input type="number" id="editTarifaQuincenal" name="editTarifaQuincenal">
+                <button type="button" id="btnInsertarVehiculo">Insertar Vehículo</button>
+                <button type="button" id="btnActualizarVehiculo">Actualizar Vehículo</button>
+                <button type="button" id="btnEliminarVehiculo">Eliminar Vehículo</button>
+            </form>
+        </section>
+    </div>
+    <section>
+        <h2>Listado de Todos los Tipos de Vehículos</h2>
+        <button id="consultarTodosBtn">Consultar Todos</button>
+        <div id="listadoTiposVehiculos"></div>
+    </section>
+    <script src="Scripts/TiposDeVehiculos.js"></script>
+    <script src="Scripts/Vehiculos.js"></script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Catálogo - Renta de Vehículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c1b18; /* Fondo oscuro */
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-image: url('ruta/a/tu/imagen-de-fondo.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            header img {
+                height: 50px;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+            nav ul li {
+                margin-right: 20px;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    padding: 10px 15px;
+                    background-color: #1a73e8;
+                    border-radius: 4px;
+                    transition: background-color 0.3s;
+                }
+
+                    nav ul li a:hover {
+                        background-color: #1558b0;
+                    }
+
+        .container {
+            background-color: rgba(60, 60, 60, 0.9); /* Fondo semi-transparente */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin: 20px auto;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+            .form-group label {
+                margin-bottom: 5px;
+            }
+
+            .form-group input, .form-group select {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                color: black;
+            }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .form-actions button {
+                padding: 10px 20px;
+                background-color: #1a73e8;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 100%;
+                margin: 5px 0;
+            }
+
+                .form-actions button:hover {
+                    background-color: #1558b0;
+                }
+
+        #listadoTiposVehiculos {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(60, 60, 60, 0.9); /* Fondo semi-transparente */
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            color: #333;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaeaea;
+        }
+
+        #consultarTodosBtn {
+            padding: 10px 20px;
+            background-color: #1a73e8; /* Unificar color de botón */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+            #consultarTodosBtn:hover {
+                background-color: #1558b0;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LOGO.webp" alt="Logo ITM Car Deluxe">
+        <h1>Gestión de Catálogo de Vehículos</h1>
+        <nav>
+            <ul>
+                <li><a href="Menu.html">Inicio</a></li>
+                <li><a href="GestionCatalogo.html">Gestión de Catálogo</a></li>
+                <li><a href="GestionEmpleados.html">Gestión de Empleados</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Agregar Tipo de Vehículo</h2>
+        <form id="formAgregarTipoVehiculo">
+            <div class="form-group">
+                <label for="TipoVehiculoID">Tipo Vehículo ID:</label>
+                <input type="number" id="TipoVehiculoID" name="TipoVehiculoID" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <select id="descripcion" name="descripcion">
+                    <option value="sedan">Sedan</option>
+                    <option value="furgoneta">Furgoneta</option>
+                    <option value="camion">Camión</option>
+                    <option value="camioneta">Camioneta</option>
+                    <option value="coupe">Coupé</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Agregar</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <h2>Consultar Tipo de Vehículo por ID</h2>
+        <form id="formConsultaTipoVehiculoID">
+            <div class="form-group">
+                <label for="consultaTipoVehiculoID">Tipo Vehículo ID:</label>
+                <input type="number" id="consultaTipoVehiculoID" name="consultaTipoVehiculoID" required>
+            </div>
+            <div class="form-actions">
+                <button type="button" id="btnConsultarPorID" onclick="consultarTipoVehiculoPorID()">Consultar por ID</button>
+            </div>
+        </form>
+    </div>
+    <div class="container" id="detallesTipoVehiculo" style="display:none;">
+        <h2>Detalles del Tipo de Vehículo</h2>
+        <form id="formDetallesTipoVehiculo">
+            <div class="form-group">
+                <label for="tipoVehiculoID">Tipo Vehículo ID:</label>
+                <input type="text" id="tipoVehiculoID" name="tipoVehiculoID" disabled>
+            </div>
+            <div class="form-group">
+                <label for="editDescripcion">Descripción:</label>
+                <input type="text" id="editDescripcion" name="editDescripcion">
+            </div>
+            <div class="form-actions">
+                <button type="button" id="btnActualizarDescripcion">Actualizar Descripción</button>
+                <button type="button" id="btnEliminarTipo">Eliminar</button>
+            </div>
+        </form>
+    </div>
+    <div class="container" id="vehiculosAsociados" style="display:none;">
+        <h2>Vehículos Asociados</h2>
+        <form id="formVehiculosAsociados">
+            <div class="form-group">
+                <label for="editVehiculoID">Vehiculo ID:</label>
+                <input type="number" id="editVehiculoID" name="editVehiculoID">
+            </div>
+            <div class="form-group">
+                <label for="editTipoVehiculoID">Tipo Vehiculo ID:</label>
+                <input type="number" id="editTipoVehiculoID" name="editTipoVehiculoID">
+            </div>
+            <div class="form-group">
+                <label for="editSucursalID">Sucursal ID:</label>
+                <select id="editSucursalID" name="editSucursalID">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="editMarca">Marca:</label>
+                <input type="text" id="editMarca" name="editMarca">
+            </div>
+            <div class="form-group">
+                <label for="editModelo">Modelo:</label>
+                <input type="text" id="editModelo" name="editModelo">
+            </div>
+            <div class="form-group">
+                <label for="editAno">Año:</label>
+                <input type="number" id="editAno" name="editAno">
+            </div>
+            <div class="form-group">
+                <label for="editNumeroPlaca">Número de Placa:</label>
+                <input type="text" id="editNumeroPlaca" name="editNumeroPlaca">
+            </div>
+            <div class="form-group">
+                <label for="editEstado">Estado:</label>
+                <input type="text" id="editEstado" name="editEstado">
+            </div>
+            <div class="form-group">
+                <label for="editSeguroID">Seguro ID:</label>
+                <select id="editSeguroID" name="editSeguroID">
+                    <option value="1">Cobertura Total</option>
+                    <option value="2">Cobertura Parcial</option>
+                    <option value="3">Cobertura Por Robo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="editTarifaQuincenal">Tarifa Quincenal:</label>
+                <input type="number" id="editTarifaQuincenal" name="editTarifaQuincenal">
+            </div>
+            <div class="form-actions">
+                <button type="button" id="btnInsertarVehiculo">Insertar Vehículo</button>
+                <button type="button" id="btnActualizarVehiculo">Actualizar Vehículo</button>
+                <button type="button" id="btnEliminarVehiculo">Eliminar Vehículo</button>
+            </div>
+        </form>
+    </div>
+    <div id="listadoTiposVehiculos">
+        <h2>Listado de Todos los Tipos de Vehículos</h2>
+        <button id="consultarTodosBtn">Consultar Todos</button>
+        <div id="listadoTiposVehiculos"></div>
+    </div>
+    <script src="Scripts/TiposDeVehiculos.js"></script>
+    <script src="Scripts/Vehiculos.js"></script>
+</body>
+</html>

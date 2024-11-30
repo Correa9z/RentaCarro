@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EXAMEN 3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="Estilos/css/all.min.css" rel="stylesheet" />
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" id="dvMenu"></div>
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">EXAMEN 3 - 6-8 SUBASTA ARTÍCULOS</h3>
+                        </div>
+                        <form id="frmIncapacidades">
+                            <div class="card-body">
+                                <div class="card card-gray-dark">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DATOS ENTRADA</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtCodigo">CÓDIGO</label>
+                                                    <input type="text" class="form-control" id="txtCodigo" placeholder="Código (id)">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtVendedor">VENDEDOR</label>
+                                                    <input type="text" class="form-control" id="txtVendedor" placeholder="Nombre del vendedor">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtComprador">COMPRADOR</label>
+                                                    <input type="text" class="form-control" id="txtComprador" placeholder="Nombre del comprador">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtValorVenta">VALOR VENTA</label>
+                                                    <input type="number" class="form-control" id="txtValorVenta" placeholder="Valor de la venta">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboTipoArticulo">TIPO ARTÍCULO</label>
+                                                    <select class="form-control" id="cboTipoArticulo">
+                                                        <option value="1">Joyas</option>
+                                                        <option value="2">Electrodomésticos</option>
+                                                        <option value="3">Vehículos</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtArticulo">ARTÍCULO</label>
+                                                    <input type="text" class="form-control" id="txtArticulo" placeholder="Artículo comprado">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaInicioSubasta">FECHA INICIO</label>
+                                                    <input type="date" class="form-control" id="txtFechaInicioSubasta" placeholder="Fecha inicio subasta">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaFinSubasta">FECHA FIN</label>
+                                                    <input type="date" class="form-control" id="txtFechaFinSubasta" placeholder="Fecha fin subasta">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaPago">FECHA PAGO</label>
+                                                    <input type="date" class="form-control" id="txtFechaPago" placeholder="Fecha pago">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <br />
+                                                <button type="button" id="btnInsertar" class="btn-block btn-lg btn-primary">INSERTAR</button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <br />
+                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary">ACTUALIZAR</button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <br />
+                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary">CONSULTAR</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="dvMensaje" class=""></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table id="tblSubasta" class="table table-bordered table-striped" style="width:100%;"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/Subasta.js"></script>
+</body>
+</html>

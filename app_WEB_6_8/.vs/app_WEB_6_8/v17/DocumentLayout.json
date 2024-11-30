@@ -1,0 +1,192 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|c:\\users\\david\\onedrive\\escritorio\\proyecto\\app_web_6_8\\paginas\\loginempleado.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\loginempleado.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\paginas\\gestioncatalogo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\gestioncatalogo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\paginas\\gestionempleados.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\gestionempleados.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\paginas\\scripts\\loginempleados.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\scripts\\loginempleados.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\paginas\\scripts\\tiposdevehiculos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\scripts\\tiposdevehiculos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\paginas\\examen_3_6_8.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\examen_3_6_8.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\paginas\\scripts\\subasta.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\scripts\\subasta.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\paginas\\scripts\\empleados.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\scripts\\empleados.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\paginas\\menu.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73A6DCAA-31B6-47E7-A9A1-309FCD0DD131}|app_WEB_6_8.csproj|solutionrelative:paginas\\menu.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 625,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Subasta.js",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Scripts\\Subasta.js",
+              "RelativeDocumentMoniker": "Paginas\\Scripts\\Subasta.js",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Scripts\\Subasta.js",
+              "RelativeToolTip": "Paginas\\Scripts\\Subasta.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-22T01:06:08.304Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TiposDeVehiculos.js",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Scripts\\TiposDeVehiculos.js",
+              "RelativeDocumentMoniker": "Paginas\\Scripts\\TiposDeVehiculos.js",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Scripts\\TiposDeVehiculos.js",
+              "RelativeToolTip": "Paginas\\Scripts\\TiposDeVehiculos.js",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-25T21:26:42.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginEmpleados.js",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Scripts\\LoginEmpleados.js",
+              "RelativeDocumentMoniker": "Paginas\\Scripts\\LoginEmpleados.js",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Scripts\\LoginEmpleados.js",
+              "RelativeToolTip": "Paginas\\Scripts\\LoginEmpleados.js",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAFkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-25T21:23:02.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "loginEmpleado.html",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\loginEmpleado.html",
+              "RelativeDocumentMoniker": "Paginas\\loginEmpleado.html",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\loginEmpleado.html",
+              "RelativeToolTip": "Paginas\\loginEmpleado.html",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAwE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-25T02:03:44.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GestionCatalogo.html",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\GestionCatalogo.html",
+              "RelativeDocumentMoniker": "Paginas\\GestionCatalogo.html",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\GestionCatalogo.html",
+              "RelativeToolTip": "Paginas\\GestionCatalogo.html",
+              "ViewState": "AQIAAKICAAAAAAAAAAAAwMACAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-24T22:04:50.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GestionEmpleados.html",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\GestionEmpleados.html",
+              "RelativeDocumentMoniker": "Paginas\\GestionEmpleados.html",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\GestionEmpleados.html",
+              "RelativeToolTip": "Paginas\\GestionEmpleados.html",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-26T00:47:29.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Examen_3_6_8.html",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Examen_3_6_8.html",
+              "RelativeDocumentMoniker": "Paginas\\Examen_3_6_8.html",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Examen_3_6_8.html",
+              "RelativeToolTip": "Paginas\\Examen_3_6_8.html",
+              "ViewState": "AQIAADQAAAAAAAAAAAAgwIEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-21T22:05:42.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Menu.html",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Menu.html",
+              "RelativeDocumentMoniker": "Paginas\\Menu.html",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Menu.html",
+              "RelativeToolTip": "Paginas\\Menu.html",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAABEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-04-21T22:39:04.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Empleados.js",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Scripts\\Empleados.js",
+              "RelativeDocumentMoniker": "Paginas\\Scripts\\Empleados.js",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Escritorio\\PROYECTO\\app_WEB_6_8\\Paginas\\Scripts\\Empleados.js",
+              "RelativeToolTip": "Paginas\\Scripts\\Empleados.js",
+              "ViewState": "AQIAAMQAAAAAAAAAAAAiwOQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-23T20:40:27.654Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 44,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

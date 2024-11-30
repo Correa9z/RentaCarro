@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RentaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="ClienteID" />
+          </Key>
+          <Property Name="ClienteID" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" />
+          <Property Name="DNI" Type="varchar" MaxLength="20" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Direccion" Type="varchar" MaxLength="100" />
+          <Property Name="Contra" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Contratos">
+          <Key>
+            <PropertyRef Name="ContratoID" />
+          </Key>
+          <Property Name="ContratoID" Type="int" Nullable="false" />
+          <Property Name="ReservaID" Type="int" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaFin" Type="datetime" />
+          <Property Name="Terminos" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Empleados">
+          <Key>
+            <PropertyRef Name="EmpleadoID" />
+          </Key>
+          <Property Name="EmpleadoID" Type="int" Nullable="false" />
+          <Property Name="SucursalID" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Posicion" Type="varchar" MaxLength="50" />
+          <Property Name="Contra" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="EventosDeVehiculos">
+          <Key>
+            <PropertyRef Name="EventoID" />
+          </Key>
+          <Property Name="EventoID" Type="int" Nullable="false" />
+          <Property Name="VehiculoID" Type="int" />
+          <Property Name="TipoEvento" Type="varchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="FechaEvento" Type="datetime" />
+        </EntityType>
+        <EntityType Name="HistorialDeAccidentes">
+          <Key>
+            <PropertyRef Name="AccidenteID" />
+          </Key>
+          <Property Name="AccidenteID" Type="int" Nullable="false" />
+          <Property Name="VehiculoID" Type="int" />
+          <Property Name="FechaAccidente" Type="datetime" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="CostoReparacion" Type="int" />
+        </EntityType>
+        <EntityType Name="Mantenimientos">
+          <Key>
+            <PropertyRef Name="MantenimientoID" />
+          </Key>
+          <Property Name="MantenimientoID" Type="int" Nullable="false" />
+          <Property Name="VehiculoID" Type="int" />
+          <Property Name="FechaMantenimiento" Type="datetime" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Costo" Type="int" />
+        </EntityType>
+        <EntityType Name="MantenimientosRepuestos">
+          <Key>
+            <PropertyRef Name="MantenimientoID" />
+            <PropertyRef Name="RepuestoID" />
+          </Key>
+          <Property Name="MantenimientoID" Type="int" Nullable="false" />
+          <Property Name="RepuestoID" Type="int" Nullable="false" />
+          <Property Name="Cantidad" Type="int" />
+        </EntityType>
+        <EntityType Name="Pagos">
+          <Key>
+            <PropertyRef Name="PagoID" />
+          </Key>
+          <Property Name="PagoID" Type="int" Nullable="false" />
+          <Property Name="ReservaID" Type="int" />
+          <Property Name="Monto" Type="int" />
+          <Property Name="FechaPago" Type="datetime" />
+          <Property Name="TipoPagoID" Type="int" />
+        </EntityType>
+        <EntityType Name="Promociones">
+          <Key>
+            <PropertyRef Name="PromocionID" />
+          </Key>
+          <Property Name="PromocionID" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="Descuento" Type="int" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaFin" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Repuestos">
+          <Key>
+            <PropertyRef Name="RepuestoID" />
+          </Key>
+          <Property Name="RepuestoID" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="Costo" Type="int" />
+        </EntityType>
+        <EntityType Name="Reservas">
+          <Key>
+            <PropertyRef Name="ReservaID" />
+          </Key>
+          <Property Name="ReservaID" Type="int" Nullable="false" />
+          <Property Name="ClienteID" Type="int" />
+          <Property Name="EmpleadoID" Type="int" />
+          <Property Name="VehiculoID" Type="int" />
+          <Property Name="FechaReserva" Type="datetime" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaFin" Type="datetime" />
+          <Property Name="EstadoReserva" Type="varchar" MaxLength="20" />
+          <Property Name="TarifaAplicada" Type="int" />
+          <Property Name="PromocionID" Type="int" />
+        </EntityType>
+        <EntityType Name="Seguros">
+          <Key>
+            <PropertyRef Name="SeguroID" />
+          </Key>
+          <Property Name="SeguroID" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="Cobertura" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Sucursales">
+          <Key>
+            <PropertyRef Name="SucursalID" />
+          </Key>
+          <Property Name="SucursalID" Type="int" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="100" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TiposDePagos">
+          <Key>
+            <PropertyRef Name="TipoPagoID" />
+          </Key>
+          <Property Name="TipoPagoID" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TiposDeVehiculos">
+          <Key>
+            <PropertyRef Name="TipoVehiculoID" />
+          </Key>
+          <Property Name="TipoVehiculoID" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Vehiculos">
+          <Key>
+            <PropertyRef Name="VehiculoID" />
+          </Key>
+          <Property Name="VehiculoID" Type="int" Nullable="false" />
+          <Property Name="TipoVehiculoID" Type="int" />
+          <Property Name="SucursalID" Type="int" />
+          <Property Name="Marca" Type="varchar" MaxLength="50" />
+          <Property Name="Modelo" Type="varchar" MaxLength="50" />
+          <Property Name="Ano" Type="int" />
+          <Property Name="NumeroPlaca" Type="varchar" MaxLength="20" />
+          <Property Name="Estado" Type="varchar" MaxLength="20" />
+          <Property Name="SeguroID" Type="int" />
+          <Property Name="TarifaQuincenal" Type="int" />
+        </EntityType>
+        <Association Name="FK__Contratos__Reser__6C190EBB">
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="0..1" />
+          <End Role="Contratos" Type="Self.Contratos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservas">
+              <PropertyRef Name="ReservaID" />
+            </Principal>
+            <Dependent Role="Contratos">
+              <PropertyRef Name="ReservaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__Sucur__4E88ABD4">
+          <End Role="Sucursales" Type="Self.Sucursales" Multiplicity="0..1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sucursales">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EventosDe__Vehic__60A75C0F">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+          <End Role="EventosDeVehiculos" Type="Self.EventosDeVehiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Principal>
+            <Dependent Role="EventosDeVehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Historial__Vehic__59FA5E80">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+          <End Role="HistorialDeAccidentes" Type="Self.HistorialDeAccidentes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Principal>
+            <Dependent Role="HistorialDeAccidentes">
+              <PropertyRef Name="VehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Mantenimi__Mante__75A278F5">
+          <End Role="Mantenimientos" Type="Self.Mantenimientos" Multiplicity="1" />
+          <End Role="MantenimientosRepuestos" Type="Self.MantenimientosRepuestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mantenimientos">
+              <PropertyRef Name="MantenimientoID" />
+            </Principal>
+            <Dependent Role="MantenimientosRepuestos">
+              <PropertyRef Name="MantenimientoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Mantenimi__Repue__76969D2E">
+          <End Role="Repuestos" Type="Self.Repuestos" Multiplicity="1" />
+          <End Role="MantenimientosRepuestos" Type="Self.MantenimientosRepuestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Repuestos">
+              <PropertyRef Name="RepuestoID" />
+            </Principal>
+            <Dependent Role="MantenimientosRepuestos">
+              <PropertyRef Name="RepuestoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Mantenimi__Vehic__72C60C4A">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+          <End Role="Mantenimientos" Type="Self.Mantenimientos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Principal>
+            <Dependent Role="Mantenimientos">
+              <PropertyRef Name="VehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pagos__ReservaID__6EF57B66">
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="0..1" />
+          <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservas">
+              <PropertyRef Name="ReservaID" />
+            </Principal>
+            <Dependent Role="Pagos">
+              <PropertyRef Name="ReservaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pagos__TipoPagoI__6FE99F9F">
+          <End Role="TiposDePagos" Type="Self.TiposDePagos" Multiplicity="0..1" />
+          <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposDePagos">
+              <PropertyRef Name="TipoPagoID" />
+            </Principal>
+            <Dependent Role="Pagos">
+              <PropertyRef Name="TipoPagoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservas__Client__66603565">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="ClienteID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="ClienteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservas__Emplea__6754599E">
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleados">
+              <PropertyRef Name="EmpleadoID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="EmpleadoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservas__Promoc__693CA210">
+          <End Role="Promociones" Type="Self.Promociones" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Promociones">
+              <PropertyRef Name="PromocionID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="PromocionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservas__Vehicu__68487DD7">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="VehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__Segur__4BAC3F29">
+          <End Role="Seguros" Type="Self.Seguros" Multiplicity="0..1" />
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seguros">
+              <PropertyRef Name="SeguroID" />
+            </Principal>
+            <Dependent Role="Vehiculos">
+              <PropertyRef Name="SeguroID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__Sucur__4AB81AF0">
+          <End Role="Sucursales" Type="Self.Sucursales" Multiplicity="0..1" />
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sucursales">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="Vehiculos">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__TipoV__49C3F6B7">
+          <End Role="TiposDeVehiculos" Type="Self.TiposDeVehiculos" Multiplicity="0..1" />
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposDeVehiculos">
+              <PropertyRef Name="TipoVehiculoID" />
+            </Principal>
+            <Dependent Role="Vehiculos">
+              <PropertyRef Name="TipoVehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RentaModelStoreContainer">
+          <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contratos" EntityType="Self.Contratos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empleados" EntityType="Self.Empleados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventosDeVehiculos" EntityType="Self.EventosDeVehiculos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HistorialDeAccidentes" EntityType="Self.HistorialDeAccidentes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mantenimientos" EntityType="Self.Mantenimientos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MantenimientosRepuestos" EntityType="Self.MantenimientosRepuestos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pagos" EntityType="Self.Pagos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Promociones" EntityType="Self.Promociones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Repuestos" EntityType="Self.Repuestos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reservas" EntityType="Self.Reservas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seguros" EntityType="Self.Seguros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sucursales" EntityType="Self.Sucursales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TiposDePagos" EntityType="Self.TiposDePagos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TiposDeVehiculos" EntityType="Self.TiposDeVehiculos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Contratos__Reser__6C190EBB" Association="Self.FK__Contratos__Reser__6C190EBB">
+            <End Role="Reservas" EntitySet="Reservas" />
+            <End Role="Contratos" EntitySet="Contratos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__Sucur__4E88ABD4" Association="Self.FK__Empleados__Sucur__4E88ABD4">
+            <End Role="Sucursales" EntitySet="Sucursales" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EventosDe__Vehic__60A75C0F" Association="Self.FK__EventosDe__Vehic__60A75C0F">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="EventosDeVehiculos" EntitySet="EventosDeVehiculos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Historial__Vehic__59FA5E80" Association="Self.FK__Historial__Vehic__59FA5E80">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="HistorialDeAccidentes" EntitySet="HistorialDeAccidentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__Mante__75A278F5" Association="Self.FK__Mantenimi__Mante__75A278F5">
+            <End Role="Mantenimientos" EntitySet="Mantenimientos" />
+            <End Role="MantenimientosRepuestos" EntitySet="MantenimientosRepuestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__Repue__76969D2E" Association="Self.FK__Mantenimi__Repue__76969D2E">
+            <End Role="Repuestos" EntitySet="Repuestos" />
+            <End Role="MantenimientosRepuestos" EntitySet="MantenimientosRepuestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__Vehic__72C60C4A" Association="Self.FK__Mantenimi__Vehic__72C60C4A">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="Mantenimientos" EntitySet="Mantenimientos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pagos__ReservaID__6EF57B66" Association="Self.FK__Pagos__ReservaID__6EF57B66">
+            <End Role="Reservas" EntitySet="Reservas" />
+            <End Role="Pagos" EntitySet="Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pagos__TipoPagoI__6FE99F9F" Association="Self.FK__Pagos__TipoPagoI__6FE99F9F">
+            <End Role="TiposDePagos" EntitySet="TiposDePagos" />
+            <End Role="Pagos" EntitySet="Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservas__Client__66603565" Association="Self.FK__Reservas__Client__66603565">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservas__Emplea__6754599E" Association="Self.FK__Reservas__Emplea__6754599E">
+            <End Role="Empleados" EntitySet="Empleados" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservas__Promoc__693CA210" Association="Self.FK__Reservas__Promoc__693CA210">
+            <End Role="Promociones" EntitySet="Promociones" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservas__Vehicu__68487DD7" Association="Self.FK__Reservas__Vehicu__68487DD7">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__Segur__4BAC3F29" Association="Self.FK__Vehiculos__Segur__4BAC3F29">
+            <End Role="Seguros" EntitySet="Seguros" />
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__Sucur__4AB81AF0" Association="Self.FK__Vehiculos__Sucur__4AB81AF0">
+            <End Role="Sucursales" EntitySet="Sucursales" />
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__TipoV__49C3F6B7" Association="Self.FK__Vehiculos__TipoV__49C3F6B7">
+            <End Role="TiposDeVehiculos" EntitySet="TiposDeVehiculos" />
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RentaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="ClienteID" />
+          </Key>
+          <Property Name="ClienteID" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DNI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Contra" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK__Reservas__Client__66603565" FromRole="Clientes" ToRole="Reservas" />
+        </EntityType>
+        <EntityType Name="Contratos">
+          <Key>
+            <PropertyRef Name="ContratoID" />
+          </Key>
+          <Property Name="ContratoID" Type="Int32" Nullable="false" />
+          <Property Name="ReservaID" Type="Int32" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="3" />
+          <Property Name="FechaFin" Type="DateTime" Precision="3" />
+          <Property Name="Terminos" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK__Contratos__Reser__6C190EBB" FromRole="Contratos" ToRole="Reservas" />
+        </EntityType>
+        <EntityType Name="Empleados">
+          <Key>
+            <PropertyRef Name="EmpleadoID" />
+          </Key>
+          <Property Name="EmpleadoID" Type="Int32" Nullable="false" />
+          <Property Name="SucursalID" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Posicion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contra" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Sucursales" Relationship="Self.FK__Empleados__Sucur__4E88ABD4" FromRole="Empleados" ToRole="Sucursales" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK__Reservas__Emplea__6754599E" FromRole="Empleados" ToRole="Reservas" />
+        </EntityType>
+        <EntityType Name="EventosDeVehiculos">
+          <Key>
+            <PropertyRef Name="EventoID" />
+          </Key>
+          <Property Name="EventoID" Type="Int32" Nullable="false" />
+          <Property Name="VehiculoID" Type="Int32" />
+          <Property Name="TipoEvento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FechaEvento" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Vehiculos" Relationship="Self.FK__EventosDe__Vehic__60A75C0F" FromRole="EventosDeVehiculos" ToRole="Vehiculos" />
+        </EntityType>
+        <EntityType Name="HistorialDeAccidentes">
+          <Key>
+            <PropertyRef Name="AccidenteID" />
+          </Key>
+          <Property Name="AccidenteID" Type="Int32" Nullable="false" />
+          <Property Name="VehiculoID" Type="Int32" />
+          <Property Name="FechaAccidente" Type="DateTime" Precision="3" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CostoReparacion" Type="Int32" />
+          <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Historial__Vehic__59FA5E80" FromRole="HistorialDeAccidentes" ToRole="Vehiculos" />
+        </EntityType>
+        <EntityType Name="Mantenimientos">
+          <Key>
+            <PropertyRef Name="MantenimientoID" />
+          </Key>
+          <Property Name="MantenimientoID" Type="Int32" Nullable="false" />
+          <Property Name="VehiculoID" Type="Int32" />
+          <Property Name="FechaMantenimiento" Type="DateTime" Precision="3" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Costo" Type="Int32" />
+          <NavigationProperty Name="MantenimientosRepuestos" Relationship="Self.FK__Mantenimi__Mante__75A278F5" FromRole="Mantenimientos" ToRole="MantenimientosRepuestos" />
+          <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Mantenimi__Vehic__72C60C4A" FromRole="Mantenimientos" ToRole="Vehiculos" />
+        </EntityType>
+        <EntityType Name="MantenimientosRepuestos">
+          <Key>
+            <PropertyRef Name="MantenimientoID" />
+            <PropertyRef Name="RepuestoID" />
+          </Key>
+          <Property Name="MantenimientoID" Type="Int32" Nullable="false" />
+          <Property Name="RepuestoID" Type="Int32" Nullable="false" />
+          <Property Name="Cantidad" Type="Int32" />
+          <NavigationProperty Name="Mantenimientos" Relationship="Self.FK__Mantenimi__Mante__75A278F5" FromRole="MantenimientosRepuestos" ToRole="Mantenimientos" />
+          <NavigationProperty Name="Repuestos" Relationship="Self.FK__Mantenimi__Repue__76969D2E" FromRole="MantenimientosRepuestos" ToRole="Repuestos" />
+        </EntityType>
+        <EntityType Name="Pagos">
+          <Key>
+            <PropertyRef Name="PagoID" />
+          </Key>
+          <Property Name="PagoID" Type="Int32" Nullable="false" />
+          <Property Name="ReservaID" Type="Int32" />
+          <Property Name="Monto" Type="Int32" />
+          <Property Name="FechaPago" Type="DateTime" Precision="3" />
+          <Property Name="TipoPagoID" Type="Int32" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK__Pagos__ReservaID__6EF57B66" FromRole="Pagos" ToRole="Reservas" />
+          <NavigationProperty Name="TiposDePagos" Relationship="Self.FK__Pagos__TipoPagoI__6FE99F9F" FromRole="Pagos" ToRole="TiposDePagos" />
+        </EntityType>
+        <EntityType Name="Promociones">
+          <Key>
+            <PropertyRef Name="PromocionID" />
+          </Key>
+          <Property Name="PromocionID" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descuento" Type="Int32" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="3" />
+          <Property Name="FechaFin" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK__Reservas__Promoc__693CA210" FromRole="Promociones" ToRole="Reservas" />
+        </EntityType>
+        <EntityType Name="Repuestos">
+          <Key>
+            <PropertyRef Name="RepuestoID" />
+          </Key>
+          <Property Name="RepuestoID" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Costo" Type="Int32" />
+          <NavigationProperty Name="MantenimientosRepuestos" Relationship="Self.FK__Mantenimi__Repue__76969D2E" FromRole="Repuestos" ToRole="MantenimientosRepuestos" />
+        </EntityType>
+        <EntityType Name="Reservas">
+          <Key>
+            <PropertyRef Name="ReservaID" />
+          </Key>
+          <Property Name="ReservaID" Type="Int32" Nullable="false" />
+          <Property Name="ClienteID" Type="Int32" />
+          <Property Name="EmpleadoID" Type="Int32" />
+          <Property Name="VehiculoID" Type="Int32" />
+          <Property Name="FechaReserva" Type="DateTime" Precision="3" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="3" />
+          <Property Name="FechaFin" Type="DateTime" Precision="3" />
+          <Property Name="EstadoReserva" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TarifaAplicada" Type="Int32" />
+          <Property Name="PromocionID" Type="Int32" />
+          <NavigationProperty Name="Clientes" Relationship="Self.FK__Reservas__Client__66603565" FromRole="Reservas" ToRole="Clientes" />
+          <NavigationProperty Name="Contratos" Relationship="Self.FK__Contratos__Reser__6C190EBB" FromRole="Reservas" ToRole="Contratos" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Reservas__Emplea__6754599E" FromRole="Reservas" ToRole="Empleados" />
+          <NavigationProperty Name="Pagos" Relationship="Self.FK__Pagos__ReservaID__6EF57B66" FromRole="Reservas" ToRole="Pagos" />
+          <NavigationProperty Name="Promociones" Relationship="Self.FK__Reservas__Promoc__693CA210" FromRole="Reservas" ToRole="Promociones" />
+          <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Reservas__Vehicu__68487DD7" FromRole="Reservas" ToRole="Vehiculos" />
+        </EntityType>
+        <EntityType Name="Seguros">
+          <Key>
+            <PropertyRef Name="SeguroID" />
+          </Key>
+          <Property Name="SeguroID" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Cobertura" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Vehiculos__Segur__4BAC3F29" FromRole="Seguros" ToRole="Vehiculos" />
+        </EntityType>
+        <EntityType Name="Sucursales">
+          <Key>
+            <PropertyRef Name="SucursalID" />
+          </Key>
+          <Property Name="SucursalID" Type="Int32" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__Sucur__4E88ABD4" FromRole="Sucursales" ToRole="Empleados" />
+          <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Vehiculos__Sucur__4AB81AF0" FromRole="Sucursales" ToRole="Vehiculos" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TiposDePagos">
+          <Key>
+            <PropertyRef Name="TipoPagoID" />
+          </Key>
+          <Property Name="TipoPagoID" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Pagos" Relationship="Self.FK__Pagos__TipoPagoI__6FE99F9F" FromRole="TiposDePagos" ToRole="Pagos" />
+        </EntityType>
+        <EntityType Name="TiposDeVehiculos">
+          <Key>
+            <PropertyRef Name="TipoVehiculoID" />
+          </Key>
+          <Property Name="TipoVehiculoID" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Vehiculos__TipoV__49C3F6B7" FromRole="TiposDeVehiculos" ToRole="Vehiculos" />
+        </EntityType>
+        <EntityType Name="Vehiculos">
+          <Key>
+            <PropertyRef Name="VehiculoID" />
+          </Key>
+          <Property Name="VehiculoID" Type="Int32" Nullable="false" />
+          <Property Name="TipoVehiculoID" Type="Int32" />
+          <Property Name="SucursalID" Type="Int32" />
+          <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ano" Type="Int32" />
+          <Property Name="NumeroPlaca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SeguroID" Type="Int32" />
+          <Property Name="TarifaQuincenal" Type="Int32" />
+          <NavigationProperty Name="EventosDeVehiculos" Relationship="Self.FK__EventosDe__Vehic__60A75C0F" FromRole="Vehiculos" ToRole="EventosDeVehiculos" />
+          <NavigationProperty Name="HistorialDeAccidentes" Relationship="Self.FK__Historial__Vehic__59FA5E80" FromRole="Vehiculos" ToRole="HistorialDeAccidentes" />
+          <NavigationProperty Name="Mantenimientos" Relationship="Self.FK__Mantenimi__Vehic__72C60C4A" FromRole="Vehiculos" ToRole="Mantenimientos" />
+          <NavigationProperty Name="Reservas" Relationship="Self.FK__Reservas__Vehicu__68487DD7" FromRole="Vehiculos" ToRole="Reservas" />
+          <NavigationProperty Name="Seguros" Relationship="Self.FK__Vehiculos__Segur__4BAC3F29" FromRole="Vehiculos" ToRole="Seguros" />
+          <NavigationProperty Name="Sucursales" Relationship="Self.FK__Vehiculos__Sucur__4AB81AF0" FromRole="Vehiculos" ToRole="Sucursales" />
+          <NavigationProperty Name="TiposDeVehiculos" Relationship="Self.FK__Vehiculos__TipoV__49C3F6B7" FromRole="Vehiculos" ToRole="TiposDeVehiculos" />
+        </EntityType>
+        <Association Name="FK__Reservas__Client__66603565">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="ClienteID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="ClienteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Contratos__Reser__6C190EBB">
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="0..1" />
+          <End Role="Contratos" Type="Self.Contratos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservas">
+              <PropertyRef Name="ReservaID" />
+            </Principal>
+            <Dependent Role="Contratos">
+              <PropertyRef Name="ReservaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empleados__Sucur__4E88ABD4">
+          <End Role="Sucursales" Type="Self.Sucursales" Multiplicity="0..1" />
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sucursales">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="Empleados">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservas__Emplea__6754599E">
+          <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empleados">
+              <PropertyRef Name="EmpleadoID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="EmpleadoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EventosDe__Vehic__60A75C0F">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+          <End Role="EventosDeVehiculos" Type="Self.EventosDeVehiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Principal>
+            <Dependent Role="EventosDeVehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Historial__Vehic__59FA5E80">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+          <End Role="HistorialDeAccidentes" Type="Self.HistorialDeAccidentes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Principal>
+            <Dependent Role="HistorialDeAccidentes">
+              <PropertyRef Name="VehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Mantenimi__Mante__75A278F5">
+          <End Role="Mantenimientos" Type="Self.Mantenimientos" Multiplicity="1" />
+          <End Role="MantenimientosRepuestos" Type="Self.MantenimientosRepuestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mantenimientos">
+              <PropertyRef Name="MantenimientoID" />
+            </Principal>
+            <Dependent Role="MantenimientosRepuestos">
+              <PropertyRef Name="MantenimientoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Mantenimi__Vehic__72C60C4A">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+          <End Role="Mantenimientos" Type="Self.Mantenimientos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Principal>
+            <Dependent Role="Mantenimientos">
+              <PropertyRef Name="VehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Mantenimi__Repue__76969D2E">
+          <End Role="Repuestos" Type="Self.Repuestos" Multiplicity="1" />
+          <End Role="MantenimientosRepuestos" Type="Self.MantenimientosRepuestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Repuestos">
+              <PropertyRef Name="RepuestoID" />
+            </Principal>
+            <Dependent Role="MantenimientosRepuestos">
+              <PropertyRef Name="RepuestoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pagos__ReservaID__6EF57B66">
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="0..1" />
+          <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservas">
+              <PropertyRef Name="ReservaID" />
+            </Principal>
+            <Dependent Role="Pagos">
+              <PropertyRef Name="ReservaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pagos__TipoPagoI__6FE99F9F">
+          <End Role="TiposDePagos" Type="Self.TiposDePagos" Multiplicity="0..1" />
+          <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposDePagos">
+              <PropertyRef Name="TipoPagoID" />
+            </Principal>
+            <Dependent Role="Pagos">
+              <PropertyRef Name="TipoPagoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservas__Promoc__693CA210">
+          <End Role="Promociones" Type="Self.Promociones" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Promociones">
+              <PropertyRef Name="PromocionID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="PromocionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservas__Vehicu__68487DD7">
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+          <End Role="Reservas" Type="Self.Reservas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehiculos">
+              <PropertyRef Name="VehiculoID" />
+            </Principal>
+            <Dependent Role="Reservas">
+              <PropertyRef Name="VehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__Segur__4BAC3F29">
+          <End Role="Seguros" Type="Self.Seguros" Multiplicity="0..1" />
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seguros">
+              <PropertyRef Name="SeguroID" />
+            </Principal>
+            <Dependent Role="Vehiculos">
+              <PropertyRef Name="SeguroID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__Sucur__4AB81AF0">
+          <End Role="Sucursales" Type="Self.Sucursales" Multiplicity="0..1" />
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sucursales">
+              <PropertyRef Name="SucursalID" />
+            </Principal>
+            <Dependent Role="Vehiculos">
+              <PropertyRef Name="SucursalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vehiculos__TipoV__49C3F6B7">
+          <End Role="TiposDeVehiculos" Type="Self.TiposDeVehiculos" Multiplicity="0..1" />
+          <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposDeVehiculos">
+              <PropertyRef Name="TipoVehiculoID" />
+            </Principal>
+            <Dependent Role="Vehiculos">
+              <PropertyRef Name="TipoVehiculoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RentaEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+          <EntitySet Name="Contratos" EntityType="Self.Contratos" />
+          <EntitySet Name="Empleados" EntityType="Self.Empleados" />
+          <EntitySet Name="EventosDeVehiculos" EntityType="Self.EventosDeVehiculos" />
+          <EntitySet Name="HistorialDeAccidentes" EntityType="Self.HistorialDeAccidentes" />
+          <EntitySet Name="Mantenimientos" EntityType="Self.Mantenimientos" />
+          <EntitySet Name="MantenimientosRepuestos" EntityType="Self.MantenimientosRepuestos" />
+          <EntitySet Name="Pagos" EntityType="Self.Pagos" />
+          <EntitySet Name="Promociones" EntityType="Self.Promociones" />
+          <EntitySet Name="Repuestos" EntityType="Self.Repuestos" />
+          <EntitySet Name="Reservas" EntityType="Self.Reservas" />
+          <EntitySet Name="Seguros" EntityType="Self.Seguros" />
+          <EntitySet Name="Sucursales" EntityType="Self.Sucursales" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="TiposDePagos" EntityType="Self.TiposDePagos" />
+          <EntitySet Name="TiposDeVehiculos" EntityType="Self.TiposDeVehiculos" />
+          <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" />
+          <AssociationSet Name="FK__Reservas__Client__66603565" Association="Self.FK__Reservas__Client__66603565">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Contratos__Reser__6C190EBB" Association="Self.FK__Contratos__Reser__6C190EBB">
+            <End Role="Reservas" EntitySet="Reservas" />
+            <End Role="Contratos" EntitySet="Contratos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empleados__Sucur__4E88ABD4" Association="Self.FK__Empleados__Sucur__4E88ABD4">
+            <End Role="Sucursales" EntitySet="Sucursales" />
+            <End Role="Empleados" EntitySet="Empleados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservas__Emplea__6754599E" Association="Self.FK__Reservas__Emplea__6754599E">
+            <End Role="Empleados" EntitySet="Empleados" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EventosDe__Vehic__60A75C0F" Association="Self.FK__EventosDe__Vehic__60A75C0F">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="EventosDeVehiculos" EntitySet="EventosDeVehiculos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Historial__Vehic__59FA5E80" Association="Self.FK__Historial__Vehic__59FA5E80">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="HistorialDeAccidentes" EntitySet="HistorialDeAccidentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__Mante__75A278F5" Association="Self.FK__Mantenimi__Mante__75A278F5">
+            <End Role="Mantenimientos" EntitySet="Mantenimientos" />
+            <End Role="MantenimientosRepuestos" EntitySet="MantenimientosRepuestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__Vehic__72C60C4A" Association="Self.FK__Mantenimi__Vehic__72C60C4A">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="Mantenimientos" EntitySet="Mantenimientos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mantenimi__Repue__76969D2E" Association="Self.FK__Mantenimi__Repue__76969D2E">
+            <End Role="Repuestos" EntitySet="Repuestos" />
+            <End Role="MantenimientosRepuestos" EntitySet="MantenimientosRepuestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pagos__ReservaID__6EF57B66" Association="Self.FK__Pagos__ReservaID__6EF57B66">
+            <End Role="Reservas" EntitySet="Reservas" />
+            <End Role="Pagos" EntitySet="Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pagos__TipoPagoI__6FE99F9F" Association="Self.FK__Pagos__TipoPagoI__6FE99F9F">
+            <End Role="TiposDePagos" EntitySet="TiposDePagos" />
+            <End Role="Pagos" EntitySet="Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservas__Promoc__693CA210" Association="Self.FK__Reservas__Promoc__693CA210">
+            <End Role="Promociones" EntitySet="Promociones" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservas__Vehicu__68487DD7" Association="Self.FK__Reservas__Vehicu__68487DD7">
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+            <End Role="Reservas" EntitySet="Reservas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__Segur__4BAC3F29" Association="Self.FK__Vehiculos__Segur__4BAC3F29">
+            <End Role="Seguros" EntitySet="Seguros" />
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__Sucur__4AB81AF0" Association="Self.FK__Vehiculos__Sucur__4AB81AF0">
+            <End Role="Sucursales" EntitySet="Sucursales" />
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vehiculos__TipoV__49C3F6B7" Association="Self.FK__Vehiculos__TipoV__49C3F6B7">
+            <End Role="TiposDeVehiculos" EntitySet="TiposDeVehiculos" />
+            <End Role="Vehiculos" EntitySet="Vehiculos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RentaModelStoreContainer" CdmEntityContainer="RentaEntities4">
+          <EntitySetMapping Name="Clientes">
+            <EntityTypeMapping TypeName="RentaModel.Clientes">
+              <MappingFragment StoreEntitySet="Clientes">
+                <ScalarProperty Name="ClienteID" ColumnName="ClienteID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Contra" ColumnName="Contra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contratos">
+            <EntityTypeMapping TypeName="RentaModel.Contratos">
+              <MappingFragment StoreEntitySet="Contratos">
+                <ScalarProperty Name="ContratoID" ColumnName="ContratoID" />
+                <ScalarProperty Name="ReservaID" ColumnName="ReservaID" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="Terminos" ColumnName="Terminos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empleados">
+            <EntityTypeMapping TypeName="RentaModel.Empleados">
+              <MappingFragment StoreEntitySet="Empleados">
+                <ScalarProperty Name="EmpleadoID" ColumnName="EmpleadoID" />
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Posicion" ColumnName="Posicion" />
+                <ScalarProperty Name="Contra" ColumnName="Contra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventosDeVehiculos">
+            <EntityTypeMapping TypeName="RentaModel.EventosDeVehiculos">
+              <MappingFragment StoreEntitySet="EventosDeVehiculos">
+                <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+                <ScalarProperty Name="VehiculoID" ColumnName="VehiculoID" />
+                <ScalarProperty Name="TipoEvento" ColumnName="TipoEvento" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="FechaEvento" ColumnName="FechaEvento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HistorialDeAccidentes">
+            <EntityTypeMapping TypeName="RentaModel.HistorialDeAccidentes">
+              <MappingFragment StoreEntitySet="HistorialDeAccidentes">
+                <ScalarProperty Name="AccidenteID" ColumnName="AccidenteID" />
+                <ScalarProperty Name="VehiculoID" ColumnName="VehiculoID" />
+                <ScalarProperty Name="FechaAccidente" ColumnName="FechaAccidente" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="CostoReparacion" ColumnName="CostoReparacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mantenimientos">
+            <EntityTypeMapping TypeName="RentaModel.Mantenimientos">
+              <MappingFragment StoreEntitySet="Mantenimientos">
+                <ScalarProperty Name="MantenimientoID" ColumnName="MantenimientoID" />
+                <ScalarProperty Name="VehiculoID" ColumnName="VehiculoID" />
+                <ScalarProperty Name="FechaMantenimiento" ColumnName="FechaMantenimiento" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Costo" ColumnName="Costo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MantenimientosRepuestos">
+            <EntityTypeMapping TypeName="RentaModel.MantenimientosRepuestos">
+              <MappingFragment StoreEntitySet="MantenimientosRepuestos">
+                <ScalarProperty Name="MantenimientoID" ColumnName="MantenimientoID" />
+                <ScalarProperty Name="RepuestoID" ColumnName="RepuestoID" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pagos">
+            <EntityTypeMapping TypeName="RentaModel.Pagos">
+              <MappingFragment StoreEntitySet="Pagos">
+                <ScalarProperty Name="PagoID" ColumnName="PagoID" />
+                <ScalarProperty Name="ReservaID" ColumnName="ReservaID" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="TipoPagoID" ColumnName="TipoPagoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Promociones">
+            <EntityTypeMapping TypeName="RentaModel.Promociones">
+              <MappingFragment StoreEntitySet="Promociones">
+                <ScalarProperty Name="PromocionID" ColumnName="PromocionID" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Repuestos">
+            <EntityTypeMapping TypeName="RentaModel.Repuestos">
+              <MappingFragment StoreEntitySet="Repuestos">
+                <ScalarProperty Name="RepuestoID" ColumnName="RepuestoID" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Costo" ColumnName="Costo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reservas">
+            <EntityTypeMapping TypeName="RentaModel.Reservas">
+              <MappingFragment StoreEntitySet="Reservas">
+                <ScalarProperty Name="ReservaID" ColumnName="ReservaID" />
+                <ScalarProperty Name="ClienteID" ColumnName="ClienteID" />
+                <ScalarProperty Name="EmpleadoID" ColumnName="EmpleadoID" />
+                <ScalarProperty Name="VehiculoID" ColumnName="VehiculoID" />
+                <ScalarProperty Name="FechaReserva" ColumnName="FechaReserva" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="EstadoReserva" ColumnName="EstadoReserva" />
+                <ScalarProperty Name="TarifaAplicada" ColumnName="TarifaAplicada" />
+                <ScalarProperty Name="PromocionID" ColumnName="PromocionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seguros">
+            <EntityTypeMapping TypeName="RentaModel.Seguros">
+              <MappingFragment StoreEntitySet="Seguros">
+                <ScalarProperty Name="SeguroID" ColumnName="SeguroID" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Cobertura" ColumnName="Cobertura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sucursales">
+            <EntityTypeMapping TypeName="RentaModel.Sucursales">
+              <MappingFragment StoreEntitySet="Sucursales">
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="RentaModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TiposDePagos">
+            <EntityTypeMapping TypeName="RentaModel.TiposDePagos">
+              <MappingFragment StoreEntitySet="TiposDePagos">
+                <ScalarProperty Name="TipoPagoID" ColumnName="TipoPagoID" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TiposDeVehiculos">
+            <EntityTypeMapping TypeName="RentaModel.TiposDeVehiculos">
+              <MappingFragment StoreEntitySet="TiposDeVehiculos">
+                <ScalarProperty Name="TipoVehiculoID" ColumnName="TipoVehiculoID" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vehiculos">
+            <EntityTypeMapping TypeName="RentaModel.Vehiculos">
+              <MappingFragment StoreEntitySet="Vehiculos">
+                <ScalarProperty Name="VehiculoID" ColumnName="VehiculoID" />
+                <ScalarProperty Name="TipoVehiculoID" ColumnName="TipoVehiculoID" />
+                <ScalarProperty Name="SucursalID" ColumnName="SucursalID" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Ano" ColumnName="Ano" />
+                <ScalarProperty Name="NumeroPlaca" ColumnName="NumeroPlaca" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="SeguroID" ColumnName="SeguroID" />
+                <ScalarProperty Name="TarifaQuincenal" ColumnName="TarifaQuincenal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
